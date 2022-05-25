@@ -1,0 +1,12 @@
+[submodule "lib/Time"]
+	path = lib/Time
+	url = https://github.com/PaulStoffregen/Time.git
+[submodule "lib/DS3232RTC"]
+	path = lib/DS3232RTC
+	url = https://github.com/JChristensen/DS3232RTC.git
+[submodule "lib/SdFat"]
+	path = lib/SdFat
+	url = https://github.com/greiman/SdFat.git
+[submodule "lib/arduino-CAN"]
+	path = lib/arduino-CAN
+	url = https://github.com/sandeepmistry/arduino-CAN.git
