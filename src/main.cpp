@@ -50,6 +50,9 @@ void setup () {
 
 void loop () {
 
+  Serial.println("[LOG] Press to Start");
+  while (digitalRead(LOG_PIN)){}
+  while (!digitalRead(LOG_PIN)){}
   //creating filename
   char fileName[20];
   time_t t = now();
@@ -65,10 +68,7 @@ void loop () {
     blockingBlink(3,200,2000);
   }
   Serial.println("[SD] file init success. File opened.");
-
-  Serial.println("[LOG] Press to Start");
-  while (digitalRead(LOG_PIN)){}
-  delay(500);
+  
   Serial.println("[LOG] started");
   file.println("logId,millis,canId,dlc,B0,B1,B2,B3,B4,B5,B6,B7"); 
   
@@ -77,8 +77,10 @@ void loop () {
     sprintf(buf, "%u,%d,%d,%02X,%02X,%02X,%02X,%02X,%02X,%02X,%02X",millis(),11,8,123,123,123,123,123,123,123,123);
     file.println(buf);
   }
+  while (!digitalRead(LOG_PIN)){}
   file.close();
   Serial.println("[LOG] stopped");
+
 
 }
 
