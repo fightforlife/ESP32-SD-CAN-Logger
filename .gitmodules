@@ -7,3 +7,6 @@
 [submodule "lib/SdFat"]
 	path = lib/SdFat
 	url = https://github.com/greiman/SdFat.git
+[submodule "lib/ESP32_TWAI_Arduino"]
+	path = lib/ESP32_TWAI_Arduino
+	url = https://github.com/fightforlife/ESP32_TWAI_Arduino.git
